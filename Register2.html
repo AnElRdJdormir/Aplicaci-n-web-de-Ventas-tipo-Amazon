@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Figure Out! | Registro</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/Register2Design.css">
+        <script src="JS/bootstrap.min.js"></script>
+    </head>
+
+    <body id="idBody">
+        <!-- NAVEGADOR PARA EL LOGIN / REGISTRO-->
+        <nav id="idNav1" class="navbar navbar-expand-md">
+            <button id="idTituloTienda" class="navbar-brand d-flex mr-auto" type="button">
+                <img src="Images/LogoO.png" width="135px"/>
+            </button>
+            <div id="idNavLinks1" class="navbar-collapse collapse order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a id="idNavOptions1" class="nav-link" href="LandingPage.html">Inicio</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="idNavLinks1" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a id="idNavOptions1" class="nav-link" href="Login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="idNavOptions2" class="nav-link" href="Register2.html">Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- CUERPO -->
+        <div id="idRegister" class="form-box form-value container">
+            <form id="idForm" action="registro.php" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <label id="idRegisterTitulo" class="text">Registro</label>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="idRegisterAvatar">
+                            <div class="d-flex justify-content-center">
+                                <img id="idRegisterAvatarSample" src="Images/AvatarGris.png" 
+                                class="rounded-circle"alt="example placeholder">
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="d-flex justify-content-center" >
+                            <div id="idRegisterAvatarBtn" name="idRegisterAvatarBtn" class="btn btn-primary btn-rounded">
+                                <input class="form-control" type="file" id="formFile" id="idRegisterAvatarBtn" name="idRegisterAvatarBtn"  onchange="mostrarAvatar(event, 'idRegisterAvatarSample')" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label id="idRegisterStep" class="text">Información Personal</label>
+                        <div id="idRegisterInputs" class="inputbox">
+                            <label for="ffullname">Nombre completo</label>
+                            <input id="txtFullname" name="txtFullname" type="text" required>
+                        </div>
+                        <div id="idRegisterInputs" class="inputbox">
+                            <label for="fusername">Nombre de Usuario</label>
+                            <input id="txtUsername" name="txtUsername" type="text" required>
+                            <small id="idRegisterInfo" class="form-text text-muted">
+                                Debe contener un mínimo de 3 carácteres.
+                            </small>
+                        </div>
+                        <div id="idRegisterInputs" class="inputbox item item-1">
+                            <label for="femail">Correo electrónico</label>
+                            <input id="txtEmail" name="txtEmail" type="email" required>
+                        </div>
+                        <div id="idRegisterInputs" class="inputbox">
+                            <label for="fpassword">Contraseña</label>
+                            <input id="txtPassword" name="txtPassword" type="password" required>
+                            <small id="idRegisterInfo" class="form-text text-muted">
+                                Debe contener un mínimo de 8 carácteres, una mayúscula, una
+                                minúscula, un número y un carácter especial.
+                            </small>
+                        </div>
+
+                        <div id="idRegisterInputs" class="inputbox item item-2">
+                            <label for="fdate">Fecha de Nacimiento: </label> 
+                            <input class="inputRegistrar" type="date" id="txtBirthdate" name="ffechanacimiento"/>
+                        </div>
+                        <div id="idRegisterRB" name="idRegisterRB">
+                            <label class="text">Género</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="RBH" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Hombre</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="RBM" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio1">Mujer</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="RBNB" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked>
+                                <label class="form-check-label" for="inlineRadio1">No binario</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col">
+                        <label id="idRegisterStep" class="text">Rol del usuario</label>
+
+                        <select id="idRegisterRol" name="idRegisterRol" class="form-select" aria-label="Default select example">
+                            <option class="item-1" value="" selected>Selecciona un rol</option>
+                            <option id="dropdown" value="1">Comprador</option>
+                            <option id="dropdown"  value="2">Vendedor</option>
+                            <option id="dropdown"  value="3">Administrador</option>
+                        </select>
+                        
+                        <br/>
+                        <!-- <label id="idRegisterPrivacy" class="text">Privacidad de la cuenta</label> -->
+
+                        <select id="idRegisterChB" name="idRegisterChB"  class="form-select" aria-label="Default select example">
+                            <option id="dropdownPrivacy" class="item-1" value="" selected>Privacidad de la cuenta</option>
+                            <option id="dropdownPrivacy" value="1">Pública</option>
+                            <option id="dropdownPrivacy2" value="2" hidden>Privada</option>
+                        </select>
+                        
+                        <div id="idRegisterImgRelleno">
+                            <img src="Images/Registro.png" width="300px"/>
+                        </div>
+        
+                        <div id="idRegisterBtns2" class="d-flex justify-content-between">
+                            <button id="btnRegister" type="submit">Confirmar Registro</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="JS/bootstrap.min.js"></script>
+        <script src="JS/Register.js"></script>
+    </body>
+</html>
